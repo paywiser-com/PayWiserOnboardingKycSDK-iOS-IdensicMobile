@@ -134,6 +134,17 @@
 @property (nonatomic, nonnull) UIColor *secondaryButtonContentDisabled;
 
 
+#pragma mark - Card
+
+/// Used as a background color for the cards with `.plain` card style.
+/// Default is `nil`.
+@property (nonatomic, nullable) UIColor *cardPlainBackground;
+
+/// Used as a background color for the cards with `.bordered` card style.
+/// Default is `nil`.
+@property (nonatomic, nullable) UIColor *cardBorderedBackground;
+
+
 #pragma mark - Camera
 
 /// The Camera Screen background color.
@@ -145,25 +156,25 @@
 @property (nonatomic, nonnull) UIColor *cameraContent;
 
 
-#pragma mark - Fields
+#pragma mark - Field
 
-/// The background color of the input fields. Used for the search bar only at the moment.
+/// The background color of the input fields. Used for text fields.
 /// Default is #F6F7F9 and #FFFFFF with alpha 7% for the dark appearance.
 @property (nonatomic, nonnull) UIColor *fieldBackground;
 
-/// The border color of the input fields. Used for the search bar only at the moment.
+/// The border color of the input fields. Used for text fields.
 /// Default is the clear color.
 @property (nonatomic, nonnull) UIColor *fieldBorder;
 
-/// The placeholder color of the input fields. Used for the search bar only at the moment.
+/// The placeholder color of the input fields. Used for text fields.
 /// Default is #94A0B8 and #FFFFFF with alpha 40% for the dark appearance.
 @property (nonatomic, nonnull) UIColor *fieldPlaceholder;
 
-/// The content color of the input fields. Used for the search bar only at the moment.
+/// The content color of the input fields. Used for text fields.
 /// Default is #333C4D and #FFFFFF with alpha 85% for the dark appearance.
 @property (nonatomic, nonnull) UIColor *fieldContent;
 
-/// The tint color of the input fields. Used for the search bar only at the moment.
+/// The tint color of the input fields. Used for text fields, checkboxes and radio buttons.
 /// Default is #1693E9 and #1485D1 for the dark appearance.
 @property (nonatomic, nonnull) UIColor *fieldTint;
 

@@ -10,6 +10,7 @@
 @class SNSTheme;
 @class SNSActionResult;
 @class SNSEvent;
+@protocol SNSMobileSDKDelegate;
 
 /**
  * Environment the SDK should operate on
@@ -191,7 +192,7 @@ NS_SWIFT_NAME(init(accessToken:environment:));
                                   locale:(nullable NSString *)locale
                             supportEmail:(nullable NSString *)supportEmail
 
-NS_SWIFT_NAME(init(baseUrl:flowName:accessToken:locale:supportEmail:));
+NS_SWIFT_NAME(init(baseUrl:flowName:accessToken:locale:supportEmail:)) DEPRECATED_MSG_ATTRIBUTE("Use init(accessToken:) instead.");
 
 + (nonnull instancetype)new NS_UNAVAILABLE;
 - (nonnull instancetype)init NS_UNAVAILABLE;
@@ -384,7 +385,8 @@ NS_SWIFT_NAME(init(baseUrl:flowName:accessToken:locale:supportEmail:));
  * When the sdk needs a string it will look for the corresponding key in the `strings` dictionary.
  * If the key is not found, the sdk will try to get the string with `NSLocalizedString`.
  *
- * During the initial loading the `strings` dictionary will be overwritten with the strings taken from the dashboard for the language corresponding to the selected `locale`.
+ * During the initial loading the `strings` dictionary will be appended with the strings taken from the dashboard for the language corresponding to the selected `locale`.
+ * Pay attention please that locally defined strings have precedence over the remotely taken ones.
  */
 @property (nonatomic, nonnull) NSDictionary<NSString *, NSString *> *strings;
 
@@ -439,6 +441,13 @@ NS_SWIFT_NAME(init(baseUrl:flowName:accessToken:locale:supportEmail:));
  * @discussion Reserved for the future needs.
  */
 @property (nonatomic, nullable) NSDictionary *settings;
+
+#pragma mark - Delegate
+
+/**
+ * Delegate
+ */
+@property (nonatomic, weak, nullable) id<SNSMobileSDKDelegate> delegate;
 
 #pragma mark - Aliases
 

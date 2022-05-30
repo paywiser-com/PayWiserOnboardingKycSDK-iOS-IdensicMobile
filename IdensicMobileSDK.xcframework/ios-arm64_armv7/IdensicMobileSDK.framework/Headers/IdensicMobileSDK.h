@@ -16,4 +16,5 @@ FOUNDATION_EXPORT const unsigned char IdensicMobileSDKVersionString[];
 #import <IdensicMobileSDK/SNSActionResult.h>
 #import <IdensicMobileSDK/SNSEvent.h>
 #import <IdensicMobileSDK/SNSTheme.h>
+#import <IdensicMobileSDK/SNSMobileSDKDelegate.h>
 

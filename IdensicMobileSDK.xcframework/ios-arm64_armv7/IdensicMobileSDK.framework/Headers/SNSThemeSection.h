@@ -26,6 +26,14 @@ extern SNSVerificationStepKey _Nonnull const SNSVerificationStepKeyProofOfReside
 extern SNSVerificationStepKey _Nonnull const SNSVerificationStepKeyApplicantData;
 extern SNSVerificationStepKey _Nonnull const SNSVerificationStepKeyEmailVerification;
 extern SNSVerificationStepKey _Nonnull const SNSVerificationStepKeyPhoneVerification;
+extern SNSVerificationStepKey _Nonnull const SNSVerificationStepKeyQuestionnaire;
+
+typedef NSString * SNSVerificationStepState NS_TYPED_EXTENSIBLE_ENUM;
+extern SNSVerificationStepState _Nonnull const SNSVerificationStepStateNotSubmitted;
+extern SNSVerificationStepState _Nonnull const SNSVerificationStepStateSubmitted;
+extern SNSVerificationStepState _Nonnull const SNSVerificationStepStateReviewing;
+extern SNSVerificationStepState _Nonnull const SNSVerificationStepStateApproved;
+extern SNSVerificationStepState _Nonnull const SNSVerificationStepStateDeclined;
 
 typedef NSString * SNSDocumentTypeKey NS_TYPED_EXTENSIBLE_ENUM;
 extern SNSDocumentTypeKey _Nonnull const SNSDocumentTypeKeyDefault;
@@ -42,6 +50,7 @@ extern SNSSceneType _Nonnull const SNSSceneTypeScanFrontSide;
 extern SNSSceneType _Nonnull const SNSSceneTypeScanBackSide;
 extern SNSSceneType _Nonnull const SNSSceneTypeData;
 extern SNSSceneType _Nonnull const SNSSceneTypeConfirmation;
+extern SNSSceneType _Nonnull const SNSSceneTypeQuestionnaire;
 
 typedef NSString * SNSInstructionsBlockType NS_TYPED_EXTENSIBLE_ENUM;
 extern SNSInstructionsBlockType _Nonnull const SNSInstructionsBlockTypeSingle;
